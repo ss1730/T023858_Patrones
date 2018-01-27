@@ -1,0 +1,5 @@
+D:\Cetys\8vo\DisenoDeSoftware\Supertipo\Supertipo\bin\Debug\Supertipo.exe.config
+D:\Cetys\8vo\DisenoDeSoftware\Supertipo\Supertipo\bin\Debug\Supertipo.exe
+D:\Cetys\8vo\DisenoDeSoftware\Supertipo\Supertipo\bin\Debug\Supertipo.pdb
+D:\Cetys\8vo\DisenoDeSoftware\Supertipo\Supertipo\obj\Debug\Supertipo.exe
+D:\Cetys\8vo\DisenoDeSoftware\Supertipo\Supertipo\obj\Debug\Supertipo.pdb
