@@ -11,11 +11,7 @@ namespace ConsoleApplication1.Classes
     {
         private string _value;
 
-        public FromField(string value)
-        {
-            _value = value;
-        }
-
+     
         public bool Validate(string validator)
         {
             throw new NotImplementedException();
