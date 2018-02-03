@@ -4,14 +4,16 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ConsoleApplication1.Interface;
 
 namespace ConsoleApplication1.Classes
 {
-    class ValidateEmail
+    class ValidateEmail: IValidator
     {
-        public string CheckEmail(string email)
+     
+        public string Validate(string validator)
         {
-            return Regex.Match(email, @"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*").Success ? "Telefono Correcto" : "Telefono Falso";
+            return Regex.Match(validator, @"\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*\s*").Success ? "Telefono Correcto" : "Telefono Falso";
         }
     }
 }

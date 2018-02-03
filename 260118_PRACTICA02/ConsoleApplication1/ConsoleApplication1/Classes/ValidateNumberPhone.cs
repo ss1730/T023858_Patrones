@@ -4,14 +4,17 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using ConsoleApplication1.Interface;
 
 namespace ConsoleApplication1.Classes
 {
-    class ValidateNumberPhone
+    class ValidateNumberPhone: IValidator
     {
-        public  string CheckNumberPhone(string number)
+       
+
+        public string Validate(string validator)
         {
-            return Regex.Match(number, @"^(\+[0-9])$").Success ? "Telefono Correcto" : "Telefono Falso";
+            return Regex.Match(validator, @"\(?\d{3}\)?-? *\d{3}-? *-?\d{4}").Success ? "Telefono Correcto" : "Telefono Falso"; ;
         }
     }
 }

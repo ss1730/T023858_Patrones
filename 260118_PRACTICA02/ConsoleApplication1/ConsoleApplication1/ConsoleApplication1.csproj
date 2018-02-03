@@ -43,6 +43,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\FromField.cs" />
+    <Compile Include="Classes\ValidateEmail.cs" />
+    <Compile Include="Classes\ValidateNumberPhone.cs" />
+    <Compile Include="Interface\IValidator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -9,12 +9,12 @@ namespace ConsoleApplication1.Classes
 {
     class FromField : IValidator
     {
-        private string _value;
+        public IValidator Validator;
 
      
-        public bool Validate(string validator)
+        public string Validate(string validator)
         {
-            throw new NotImplementedException();
+            return "validar";
         }
     }
 }

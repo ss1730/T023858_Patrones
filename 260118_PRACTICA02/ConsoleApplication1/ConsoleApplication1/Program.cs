@@ -11,28 +11,40 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-            FromField fieldToValidate = new FromField();
-            Console.WriteLine("Welcome to the Valedor Validator");
-            Console.WriteLine("Ingrese su Cadena de Texto");
-            var cadena = Console.ReadLine();
-            Console.WriteLine("1.-Validar Correo");
-            Console.WriteLine("2.-Validar # de Telefono");
-            Console.WriteLine("Con que opcion desea Validar su Candena? ");
-            var temp = Console.ReadLine();
-            switch (temp)
+            var repeat = "";
+            do
             {
-                case "1":
-                    fieldToValidate.Validate(cadena);
-                    break;
-
-                case "2":
-                    fieldToValidate.Validate(cadena);
-                    break;
-                    
-                    default:
-                    Console.WriteLine("Opcion No Valida");
+                Console.Clear();
+                FromField fieldToValidate = new FromField();
+                Console.WriteLine("Welcome to the Valedor Validator");
+                Console.WriteLine("Ingrese su Cadena de Texto");
+                var cadena = Console.ReadLine();
+                Console.WriteLine("1.-Validar Correo");
+                Console.WriteLine("2.-Validar # de Telefono");
+                Console.WriteLine("Con que opcion desea Validar su Candena? ");
+                var temp = Console.ReadLine();
+                switch (temp)
+                {
+                    case "1":
+                        fieldToValidate.Validator = new ValidateEmail();
+                        Console.WriteLine(fieldToValidate.Validator.Validate(cadena));
+                        Console.ReadKey();
                         break;
-            }
+
+                    case "2":
+                        fieldToValidate.Validator = new ValidateNumberPhone();
+                        Console.WriteLine(fieldToValidate.Validator.Validate(cadena));
+                        Console.ReadKey();
+
+                        break;
+
+                    default:
+                        Console.WriteLine("Opcion No Valida");
+                        break;
+                }
+                Console.WriteLine("Desea otra opcion? 1.->Si 2.->No");
+                repeat = Console.ReadLine();
+            } while (repeat == "1");
         }
     }
 }

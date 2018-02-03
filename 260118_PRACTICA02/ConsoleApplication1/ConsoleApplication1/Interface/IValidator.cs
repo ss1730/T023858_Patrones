@@ -8,6 +8,6 @@ namespace ConsoleApplication1.Interface
 {
     interface IValidator
     {
-        bool Validate(string validator);
+        string Validate(string validator);
     }
 }
