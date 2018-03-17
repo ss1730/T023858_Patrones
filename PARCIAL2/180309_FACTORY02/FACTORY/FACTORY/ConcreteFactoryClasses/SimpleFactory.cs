@@ -2,19 +2,19 @@
 {
     class SimpleFactory:Factory
     {
-        string Name { get; set; }
+        private string _factoryName { get; set; }
         public SimpleFactory()
         {
-            this.Name = "Simple Factory";
+            this._factoryName = "Simple Factory";
         }
-        public void CreatePizza(Pizza pizza)
+        public void GetPizza(Pizza pizza)
         {
             pizza.GetPizza();
         }
 
         public string NameFactory()
         {
-            return Name;
+            return _factoryName;
         }
 
        
